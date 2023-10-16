@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 17:22:56 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/16 17:36:45 by vharatyk         ###   ########.fr       */
+/*   Created: 2023/10/16 18:13:46 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/16 18:14:13 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdio.h>
 #include<string.h>
-void * ft_memcpy ( void * dest, const void * src, int  num )
+void * ft_memmove ( void * dest, const void * src, int  num )
 	{
+	int j = 0 ;
 	int i = 0 ;
 
 	unsigned char *destin;
 
 	destin = (char *)dest;
-
+//boucle uselesse 
+//	while(str[j] != '\0')
+//		{
+//		j++;
+//	}
+//overflow
 	while(num != 0)
 		{
 		*(char *)destin =*(char *)src  ;
@@ -35,10 +41,10 @@ int main (void){
 	char src[] = "test";
 
 	
-	memcpy(dest,src,6);
+	memmove(dest,src,6);
 	printf("%s\n",dest);
 
-	ft_memcpy(dest1 , src , 6);
+	ft_memmove(dest1 , src , 6);
 	printf("%s",dest1);
 	
 	return 0 ;

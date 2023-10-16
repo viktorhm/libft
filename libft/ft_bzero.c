@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <strings.h>
-void ft_bzero(void *str, size_t count)
+void  ft_bzero(void *str, size_t count)
 	{
 	unsigned char	*string;
 
-	string = (unsigned char )*str;
+	string = str;
 	while(count)
 		{
 		*string = 0;
@@ -26,10 +26,10 @@ void ft_bzero(void *str, size_t count)
 #include<stdio.h>
 int main (void)
 {
-char str[]= "test";
-bzero(str,2);
+char str[]= "testwqedqdded";
+bzero(str,13);
 printf("%s",str);
-char str_1[] ="test";
-ft_bzero(str_1,2);
+char str_1[] ="testwedqwedq";
+ft_bzero(str_1,3);
 printf("%s",str);
 }
