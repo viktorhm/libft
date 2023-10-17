@@ -9,8 +9,9 @@
 /*   Updated: 2023/10/16 17:36:45 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int num)
+void	*ft_memcpy(void *dest, const void *src, size_t num)
 	{
 	char	*destin;
 

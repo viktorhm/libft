@@ -9,11 +9,9 @@
 /*   Updated: 2023/10/16 13:36:14 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 
-#include<stdio.h>
-#include <string.h>
-
-void *ft_memset(void *str ,int value ,int count)
+void *ft_memset(void *str ,int value ,size_t count)
 	{
 	unsigned char	*string;
 
@@ -27,7 +25,8 @@ void *ft_memset(void *str ,int value ,int count)
 	return(str);
 }
 
-
+#include<stdio.h>
+#include <string.h>
 int main (void)
 {
 char str[]= "test";

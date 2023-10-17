@@ -9,8 +9,9 @@
 /*   Updated: 2023/10/16 17:04:10 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 
-void	ft_bzero(void *str, unsigned int count)
+void	ft_bzero(void *str, size_t count)
 {
 	char	*string;
 
