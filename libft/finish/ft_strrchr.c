@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 18:13:46 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/16 18:14:13 by vharatyk         ###   ########.fr       */
+/*   Created: 2023/10/17 14:01:48 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/17 14:05:10 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
-#include<string.h>
-void * ft_memmove ( void * dest, const void * src, int  num )
-	{
-	char	*destin;
+#include <stddef.h>
 
-	destin = (char *)dest;
-	while (num != 0)
+char	*ft_strrchr(char const *str, int c)
+{
+	char const	*aux;
+
+	aux = NULL;
+	while (*str)
 	{
-		*(char *) destin = *(char *) src;
-		destin++;
-		src++;
-		num--;
+		if (*str == (char)c)
+			aux = str;
+		str++;
 	}
-	return (dest);
+	return ((char *)aux);
 }
-
+/*
+#include <string.h>
+#include <stdio.h>
 int main (void){
-	char dest[]  = "aaaaaaa";
-	char dest1[] = "aaaaaaa";
-	char src[] = "test";
+printf("%s",strrchr("jans.ter",'.'));
+printf("%s",ft_strrchr("jans.ter",'.'));
 
-	
-	memmove(dest,src,6);
-	printf("%s\n",dest);
-
-	ft_memmove(dest1 , src , 6);
-	printf("%s",dest1);
-	
-	return 0 ;
-}
+}*/

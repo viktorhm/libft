@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 16:19:23 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/16 17:04:10 by vharatyk         ###   ########.fr       */
+/*   Created: 2023/10/17 14:01:48 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/17 14:05:10 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <strings.h>
-void  ft_bzero(void *str, size_t count)
-	{
-	unsigned char	*string;
+#include <stddef.h>
 
-	string = str;
-	while(count)
-		{
-		*string = 0;
-		string++;
-		count--;
-	}
-	
-}
-#include<stdio.h>
-int main (void)
+char	*ft_strrchr(char const *str, int c)
 {
-char str[]= "testwqedqdded";
-bzero(str,13);
-printf("%s",str);
-char str_1[] ="testwedqwedq";
-ft_bzero(str_1,3);
-printf("%s",str);
+	char const	*aux;
+
+	aux = NULL;
+	while (*str)
+	{
+		if (*str == (char)c)
+			aux = str;
+		str++;
+	}
+	return ((char *)aux);
 }
+/*
+#include <string.h>
+#include <stdio.h>
+int main (void){
+printf("%s",strrchr("jans.ter",'.'));
+printf("%s",ft_strrchr("jans.ter",'.'));
+
+}*/

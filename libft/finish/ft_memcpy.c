@@ -9,37 +9,35 @@
 /*   Updated: 2023/10/16 17:36:45 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
-#include<string.h>
-void * ft_memcpy ( void * dest, const void * src, int  num )
-	{
-	int i = 0 ;
 
-	unsigned char *destin;
+void	*ft_memcpy(void *dest, const void *src, unsigned int num)
+	{
+	char	*destin;
 
 	destin = (char *)dest;
-
-	while(num != 0)
-		{
-		*(char *)destin =*(char *)src  ;
+	while (num != 0)
+	{
+		*(char *) destin = *(char *) src;
 		destin++;
 		src++;
 		num--;
 	}
-	  return dest ;
+	return (dest);
 }
-
+/*
+#include<stdio.h>
+#include<string.h>
 int main (void){
 	char dest[]  = "aaaaaaa";
 	char dest1[] = "aaaaaaa";
 	char src[] = "test";
 
 	
-	memcpy(dest,src,6);
+	memcpy(dest,src,0);
 	printf("%s\n",dest);
 
-	ft_memcpy(dest1 , src , 6);
+	//ft_memcpy(dest1 , src , -1);
 	printf("%s",dest1);
 	
 	return 0 ;
-}
+}*/
