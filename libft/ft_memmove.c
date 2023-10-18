@@ -11,21 +11,38 @@
 /* ************************************************************************** */
 #include<stdio.h>
 #include<string.h>
-void * ft_memmove ( void * dest, const void * src, int  num )
-	{
-	char	*destin;
 
-	destin = (char *)dest;
-	while (num != 0)
+/*
+** DESCRIPTION : La fonction memmove() copie n octets depuis la zone mémoire
+** src vers la zone mémoire dest. Les deux zones peuvent se chevaucher :
+** la copie se passe comme si les octets de src étaient d'abord copiés dans
+** une zone temporaire qui ne chevauche ni src ni dest, et les octets sont
+** ensuite copiés de la zone temporaire vers dest.
+**
+** VALEUR RENVOYEE : La fonction memmove() renvoie un pointeur sur dest.
+*/
+void * ft_memmove ( void * dst, const void * src, size_t  len )
 	{
-		*(char *) destin = *(char *) src;
-		destin++;
-		src++;
-		num--;
+	char		*d;
+	const char	*s;
+	size_t		i;
+
+	d = (char *)dst;
+	s = (const char *)src;
+	i = -1;
+	if (d < s)
+	{
+		while (++i < len)
+			d[i] = s[i];
 	}
-	return (dest);
+	else
+	{
+		while (len-- > 0)
+			d[len] = s[len];
+	}
+	return (dst);
 }
-
+/*
 int main (void){
 	char dest[]  = "aaaaaaa";
 	char dest1[] = "aaaaaaa";
@@ -40,3 +57,4 @@ int main (void){
 	
 	return 0 ;
 }
+*/
