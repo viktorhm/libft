@@ -1,18 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 12:55:42 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/16 13:01:42 by vharatyk         ###   ########.fr       */
+/*   Created: 2023/10/18 15:02:32 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/18 15:03:45 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii (int charactere){
-	if(charactere > 0 || charactere < 127)
-		return 0;
-	else : 
-		return 1;
-	}

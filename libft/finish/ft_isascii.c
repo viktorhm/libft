@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 11:15:36 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/18 14:32:13 by vharatyk         ###   ########.fr       */
+/*   Created: 2023/10/16 12:55:42 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/18 14:32:16 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <ctype.h>
-#include <stdio.h>
 
-int	ft_isdigit(int nb)
+int	ft_isascii(int charactere)
 	{
-	if (nb >= '0' && nb <= '9')
+	if (charactere >= 0 || charactere <= 127)
 		return (1);
 	else
 		return (0);
 }
-/*
-int main (void)
-{
-printf("%i  ",isdigit(84));
-printf("%i",ft_isdigit(84));
 
+/*
+#include<stdio.h>
+int main(void)
+{
+printf("%d",ft_isascii(45));
+return 0 ;
 }*/

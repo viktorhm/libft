@@ -21,10 +21,10 @@ int	ft_isalnum(int character)
 	else
 		return (0);
 }
-
+/*
 int main (void){
 printf("%i",ft_isalnum(48));
 printf("%i",isalnum(48));
 return 0 ; 
 
-}
+}*/

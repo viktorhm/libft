@@ -19,9 +19,9 @@ int	ft_isprint(int character)
 	else
 		return (1);
 }
-
+/*
 int main (void)
 {
 printf("%i  ",ft_isprint(130));
 printf("%i",isprint(130));
-}
+}*/

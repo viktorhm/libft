@@ -3,49 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 10:33:29 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/18 10:47:22 by vharatyk         ###   ########.fr       */
+/*   Created: 2023/10/18 13:39:58 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/18 15:00:10 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include "libft.h"
 
-
-int ft_atoi( const char * str )
+int	ft_atoi(const char *str )
 {
-	int result;
-	int i;
-	int value_oper;
-	
-	value_oper =0;
+	int	result;
+	int	i;
+	int	value_oper;
+
+	value_oper = 0;
 	result = 0 ;
-	
-
-	while(str[i]==' ' || str[i]=='\n' || 
-	str[i]=='\t' || str[i] == '\v' || str[i] =='\f' || str[i] == '\r' )
-	{
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-
-	}
 	while (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
 			value_oper++;
-		i++;
+		if (str[i] == '+')
+			i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		valeur = valeur * 10 + str[i] - '0';
+		result = result * 10 + str[i] - '0';
 		i++;
 	}
-
-
-
-	if()
-		return(-result);
-	else
-		return(result);
+	if (value_oper == 1)
+		return (-result);
+	if (value_oper > 1)
+		return (0);
+	return (result);
 }
 
 
@@ -53,7 +47,8 @@ int ft_atoi( const char * str )
 #include <stdio.h>
 int main (void){
 
-printf("%d",atoi("  -10"));
+printf("%d  ",atoi(" \n -+10"));
+printf("%d",ft_atoi(" \t -+10"));
 //printf("%d",ft_atoi("-10"));
 return 0 ; 
 }

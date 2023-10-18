@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:03:56 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/16 11:13:27 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/18 14:32:20 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <ctype.h>
@@ -24,11 +24,11 @@ int	ft_isalpha(int character)
 	else
 		return (1);
 }
-
+/*
 int main (void)
 {
 printf("%d",isalpha(23));
 printf("%d",ft_isalpha(23));
 
 return 0 ;
-}
+}*/
