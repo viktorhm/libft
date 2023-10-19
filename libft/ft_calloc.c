@@ -9,8 +9,8 @@
 /*   Updated: 2023/10/18 12:11:38 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
-#include<>
+#include"ftlib.h"
+
 void * calloc( size_t elementCount, size_t elementSize )
 {
 	void value
@@ -18,13 +18,5 @@ void * calloc( size_t elementCount, size_t elementSize )
 	if(!value)
 		return(NULL);
 	ft_bzero(value , elementCount )
-
-
-
 }
 
-int main(void)
-{
-
-
-}

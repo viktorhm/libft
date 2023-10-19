@@ -6,11 +6,10 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:15:36 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/18 14:32:13 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:27:07 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int nb)
 	{

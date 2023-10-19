@@ -6,11 +6,10 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:39:58 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/18 15:00:10 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:28:41 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include "libft.h"
+#include "libft.h"
 
 int	ft_atoi(const char *str )
 {
@@ -30,7 +29,7 @@ int	ft_atoi(const char *str )
 		if (str[i] == '+' && value_oper == 0)
 			value_oper = 1;
 		else
-			return(NULL);
+			return (0);
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
@@ -39,8 +38,7 @@ int	ft_atoi(const char *str )
 	}
 	return (result * value_oper);
 }
-
-
+/*
 #include <stdlib.h> 
 #include <stdio.h>
 int main (void){
@@ -49,4 +47,4 @@ printf("%d  ",atoi(" \n -+10"));
 printf("%d",ft_atoi(" \t -+10"));
 //printf("%d",ft_atoi("-10"));
 return 0 ; 
-}
+}*/

@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 12:12:24 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/18 14:46:42 by vharatyk         ###   ########.fr       */
+/*   Created: 2023/10/19 10:09:50 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/19 11:08:54 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifdef LIBFT
-#define LIBFT
 #include<stdlib.h>
 
-ft_isalpha
-ft_isdigit
-ft_tolower
-ft_isalnum
-ft_isascii 
-ft_strchr
-ft_isprint 
-ft_strrchr
-ft_strlen
-ft_strncmp
-ft_memset
-ft_bzero
-ft_memchr
-ft_memcpy 
-ft_memcmp
-ft_memmove
-ft_strnstr
-ft_strlcpy
-ft_strlcat
-ft_atoi
+void ft_strlcpy(char *dst, const char *src, size_t size);
+{
+const char *sr;
+char *ds;
+size_t i ;
+
+sr* = *src;
+ds* = *dst;
+i=0;
+
+while(size < i)
+{
+ds[i]=sr[i]
+i++;
+}
+}
+
+
+#include <string.h>
+#include<stdio.h>
+int main(void){
+char dest[5];
+char src[5]="test";
+printf("%d",strlcpy(dest , src , 5));
+
+}
+

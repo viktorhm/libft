@@ -6,18 +6,13 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:03:56 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/18 14:32:20 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:39:36 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <ctype.h>
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalpha(int character)
 	{
-	int	i;
-
-	i = 0;
 	if ((character < 'A' || character > 'Z' ) && (character < 'a'
 			|| character > 'z'))
 		return (0);

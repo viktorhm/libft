@@ -6,9 +6,10 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:55:42 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/18 14:32:16 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:27:03 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isascii(int charactere)
 	{

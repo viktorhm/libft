@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 08:17:59 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/18 08:25:10 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:27:15 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size)
 {
