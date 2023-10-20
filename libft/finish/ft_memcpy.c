@@ -11,19 +11,24 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t num)
+void	*ft_memcpy(void *dst, const void *src, size_t num)
 	{
 	char	*destin;
+	size_t	i;
+	
+	if (!dst && !src)
+		return (0);
 
-	destin = (char *)dest;
-	while (num != 0)
+	destin = (char *)dst;
+	i = 0;
+	while (i < num)
 	{
 		*(char *) destin = *(char *) src;
 		destin++;
 		src++;
-		num--;
+		i++;
 	}
-	return (dest);
+	return (dst);
 }
 /*
 #include<stdio.h>
@@ -37,7 +42,7 @@ int main (void){
 	memcpy(dest,src,0);
 	printf("%s\n",dest);
 
-	//ft_memcpy(dest1 , src , -1);
+	ft_memcpy(dest1 , src , 0);
 	printf("%s",dest1);
 	
 	return 0 ;

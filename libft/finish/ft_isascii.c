@@ -13,7 +13,7 @@
 
 int	ft_isascii(int charactere)
 	{
-	if (charactere >= 0 || charactere <= 127)
+	if (charactere >= 0 && charactere <= 127)
 		return (1);
 	else
 		return (0);

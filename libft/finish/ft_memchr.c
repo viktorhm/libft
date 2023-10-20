@@ -15,10 +15,10 @@ void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size)
 {
 	unsigned char	*str;
 
-	str = (unsigned char *) memoryBlock;
+	str = (unsigned char*) memoryBlock;
 	while (size)
 	{
-		if (*str == (char)searchedChar)
+		if (*str == (unsigned char)searchedChar)
 			return (str);
 		str++;
 		size--;

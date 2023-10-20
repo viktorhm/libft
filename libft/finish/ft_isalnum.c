@@ -15,15 +15,15 @@ int	ft_isalnum(int character)
 	{
 	if ((character >= 'A' && character <= 'Z' )
 		|| (character >= 'a' && character <= 'z' )
-		|| (character >= '0' || character <= '9' ))
+		|| (character >= '0' && character <= '9' ))
 		return (1);
 	else
 		return (0);
 }
 /*
+#include<stdio.h>
+#include <ctype.h>
 int main (void){
-printf("%i",ft_isalnum(48));
-printf("%i",isalnum(48));
-return 0 ; 
-
-}*/
+printf("%i   ",ft_isalnum('\n'));
+printf("%i",isalnum('\n'));
+return 0 ; }*/
