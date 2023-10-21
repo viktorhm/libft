@@ -1,40 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:09:50 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/19 11:08:54 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/21 11:14:00 by viktor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
 
-void ft_strlcpy(char *dst, const char *src, size_t size);
+#include"libft.h"
+
+size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
-const char *sr;
-char *ds;
-size_t i ;
+	size_t i;
 
-sr* = *src;
-ds* = *dst;
-i=0;
-
-while(size < i)
-{
-ds[i]=sr[i]
-i++;
+	if (!dst || !src)
+		return (0);
+	i = 0;
+	if (size != 0)
+	{
+		while (src[i] != '\0' && i < (size - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (ft_strlen(*src));
 }
-}
-
 
 #include <string.h>
 #include<stdio.h>
 int main(void){
 char dest[5];
+char dest1[5];
 char src[5]="test";
-printf("%d",strlcpy(dest , src , 5));
-
+printf("%ld",strlcpy(dest , src , 5));
+printf("%ld",ft_strlcpy(dest ,src,5));
+return 0 ;
 }
 
