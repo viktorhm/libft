@@ -1,24 +1,26 @@
+SRCS = ${wildcard *.c}
+
+OBJS = ${SRCS:.c=.o}
+
 NAME = libft.a
-SOURCES = $(wildcard *.c)
 
-OBJECTS = $(SOURCES:.c=.o)
-BOBJECTS = $(BSOURCES:.c=.o)
-
-CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME)
+CC = gcc
 
-$(NAME): $(OBJECTS)
-	$(AR) -r $@ $<
+all: ${NAME}
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+${NAME}: ${OBJS}
+	ar rcs  ${NAME} ${OBJS}
+
+.o.c:
+	${CC} ${CFLAGS} -I includes -c $< -o ${<:.c=.o}
 
 clean:
-	rm -f $(OBJECTS) $(BOBJECTS)
+	rm -f ${OBJS}
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f ${NAME}
 
 re: fclean all
+
