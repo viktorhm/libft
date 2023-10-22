@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 18:13:46 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/19 14:27:35 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/22 14:35:23 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,8 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*ptr;
 	const unsigned char	*ptr2;
 
-	ptr = (unsigned char*)dst;
-	ptr2 = (unsigned char*)src;
+	ptr = (unsigned char *)dst;
+	ptr2 = (unsigned char *)src;
 	i = 0;
 	if (!ptr && !ptr2)
 		return (NULL);

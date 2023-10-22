@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:09:50 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/21 11:14:00 by viktor           ###   ########.fr       */
+/*   Updated: 2023/10/22 14:43:44 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (size > 0)
@@ -26,7 +26,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 		dst[i] = '\0';
 	}
-	return (ft_strlen((char*)src));
+	return (ft_strlen((char *)src));
 }
 /*
 #include <string.h>
@@ -39,4 +39,3 @@ printf("%ld",strlcpy(dest , src , 5));
 printf("%ld",ft_strlcpy(dest ,src,5));
 return 0 ;
 }*/
-

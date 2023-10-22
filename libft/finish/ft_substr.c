@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/11 16:59:45 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/22 14:23:59 by vharatyk         ###   ########.fr       */
+/*   Created: 2023/10/22 14:59:38 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/22 15:49:05 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-
-int	ft_strlen(const char *str)
+#include"libft.h"
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	char* dest ;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	dest = malloc(sizeof(*s)*len-start); 
+	if(!dest)
+		return(NULL);
+
+	while(start != len )
+		{
+		dest[start]=s[start];
+		start++;
+		}
+	dest[start+1] = '\0';
+return(dest);
 }
-/*
-#include<stdio.h>
-#include <string.h>
-int main(void){
-char value[]="teseserwefwefwer545e4rf89e4rfw84erf6w8e4rf6we4rt";
-printf("%li ",strlen(value));
-printf("%i",ft_strlen(value));
-return 0 ;
-}*/
+
+int int main(int argc, char const *argv[])
+{
+	char test[] ="test";
+	return 0;
+}

@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 08:17:59 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/19 14:27:15 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/22 14:33:44 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,7 +15,7 @@ void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size)
 {
 	unsigned char	*str;
 
-	str = (unsigned char*) memoryBlock;
+	str = (unsigned char *) memoryBlock;
 	while (size)
 	{
 		if (*str == (unsigned char)searchedChar)

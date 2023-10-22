@@ -6,33 +6,36 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 08:13:54 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/19 14:16:51 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/22 14:42:33 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+#include "libft.h"
 
-size_t	ft_strlcat(char *s1, const char *s2, size_t n)
+size_t	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	size_t	i;
-	size_t	j;
-	
-	if(n==0)
-		return(0);
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	res_d;
+	unsigned int	res_s;
 
-	i = 0;
-	while (s1[i] != '\0' && i < n)
-		i++;
-	j = i;
-	while (s2[i - j] != '\0' && i < n - 1)
+	i = ft_strlen(dest);
+	j = 0;
+	res_d = ft_strlen(dest);
+	res_s = ft_strlen(src);
+	if (size < 1)
+		return (res_s + size);
+	while (src[j] && i < size - 1)
 	{
-		s1[i] = s2[i - j];
+		dest[i] = src[j];
 		i++;
+		j++;
 	}
-	if (j < n)
-		s1[i] = '\0';
-	return (j + ft_strlen((char*)s2));
+	dest[i] = '\0';
+	if (size < res_d)
+		return (res_s + size);
+	else
+		return (res_d + res_s);
 }
-
 /*
 #include<bsd/string.h>
 #include<unistd.h>

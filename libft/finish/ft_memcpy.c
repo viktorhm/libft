@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:22:56 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/19 14:27:27 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/22 14:35:07 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,10 +15,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t num)
 	{
 	char	*destin;
 	size_t	i;
-	
+
 	if (!dst && !src)
 		return (0);
-
 	destin = (char *)dst;
 	i = 0;
 	while (i < num)

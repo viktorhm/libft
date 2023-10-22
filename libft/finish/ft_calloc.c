@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calloc.c                                           :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 17:08:42 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/21 17:08:47 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/22 14:17:18 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 	value = (void *)malloc(elementCount * elementSize);
 	if (!value)
 		exit(0);
-	ft_bzero (value, elementCount);
+	ft_bzero (value, elementSize * elementCount);
 	return (value);
 }
