@@ -6,19 +6,21 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:12:24 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/22 15:25:40 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/23 14:38:53 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+#include<stdio.h>
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
 # include <stddef.h>
 
-size_t		ft_strlcat(char *dest, char *src, unsigned int size);
+size_t		ft_strlcat(char *dest,const char *src, size_t size);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 void		*ft_memset(void *str, int value, size_t count);
 void		ft_bzero(void *str, size_t count);
@@ -31,6 +33,9 @@ char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(char const *str, int c);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
+//char 		*ft_strtrim(char const *s1, char const *set);
+char		*ft_itoa(int n);
 int			ft_isalpha(int c);
 int			ft_isdigit(int nb);
 int			ft_tolower(int chara);

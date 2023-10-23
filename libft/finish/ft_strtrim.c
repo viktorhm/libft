@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 15:49:24 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/23 12:20:25 by vharatyk         ###   ########.fr       */
+/*   Created: 2023/10/23 12:25:00 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/23 15:48:33 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-
-char *ft_strjoin(char const *s1, char const *s2)
+char *ft_strtrim(char const *s1, char const *set);
 {
-	char	*str_finale;
-	int nb;
+int a;
+int j;
+int i;
 
-	nb = ft_strlen(s1) + ft_strlen(s2);
-	str_finale = (char*)malloc((nb+1)*sizeof(char));
-	if(!str_finale)
-		return(NULL);
-	ft_bzero(str_finale,nb);
-	ft_strlcat(str_finale , s1 , nb + 1);
-	ft_strlcat(str_finale , s2 , nb + 1);
-	return(str_finale);
-}
+a=ft_strlen(str);
+	while(s)
+		while(str[i]=='\0')
+		{
+			if(s[i]==s[j] start)
+				start=
+			if(s[i]==s[j])
+
+		}
+	}
