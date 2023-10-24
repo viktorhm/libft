@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 12:41:09 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/24 13:24:22 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:39:24 by viktor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,59 +14,65 @@
 #include<unistd.h>
 #include<stdlib.h>
 
+#include "libft.h"
 
-static int  taille_case(char *s ,int c)
-	{
-
+static int	count_words(const char *str, char c)
+{
 	int i;
-	int value;
-	value = 0;
+	int trigger;
+
 	i = 0;
-		while(s[i]!='\0')
+	trigger = 0;
+	while (*str)
+	{
+		if (*str != c && trigger == 0)
 		{
-			if(s[i] == c)
-			{
-				printf("%c",s[i]);
-				i++;
-				value++;
-			}
+			trigger = 1;
+			i++;
+		}
+		else if (*str == c)
+			trigger = 0;
+		str++;
+	}
+	return (i);
+}
+
+static char	*word_dup(const char *str, int start, int finish)
+{
+	char	*word;
+	int		i;
+
+	i = 0;
+	word = malloc((finish - start + 1) * sizeof(char));
+	while (start < finish)
+		word[i++] = str[start++];
+	word[i] = '\0';
+	return (word);
+}
+
+char		**ft_split(char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	int		index;
+	char	**split;
+
+	if (!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
+		return (0);
+	i = 0;
+	j = 0;
+	index = -1;
+	while (i <= ft_strlen(s))
+	{
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		{
+			split[j++] = word_dup(s, index, i);
+			index = -1;
+		}
 		i++;
 	}
-	return(value+1);
-}
-
-static int *nb_chara(char *s  , int c  , int nb_case)
-{
-	int *tab;
-	int value;
-	int i ;
-	int j ; 
-
-	value = 0 ;
-	i = 0 ;
-	j = 0 ;
-	tab = malloc(nb_case*sizeof(int));
-	while(s[i]!='\0')
-	{
-		if(s[i]!= c)
-		{
-			i++;
-			value++;
-		}
-		else
-			tab[j] = i++; 
-	}
-
-
-}
-
-int main(void)
-{
-	char *s="test , love , it  , because  , is , help , my<3";
-	int i = 0 ;
-	int *tab;
-	i = taille_case(s ,',');
-	tab = nb_chara(s  , ','  , i);
-	printf("%d",tab[0]);
-
+	split[j] = 0;
+	return (split);
 }

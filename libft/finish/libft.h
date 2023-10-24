@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:12:24 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/24 09:06:51 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:44:21 by viktor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char 		*ft_strtrim(char const *s1, char const *set);
 char		*ft_itoa(int n);
+char		**ft_split(char const *s, char c);
 int			ft_isalpha(int c);
 int			ft_isdigit(int nb);
 int			ft_tolower(int chara);
