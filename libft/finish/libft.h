@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:12:24 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/23 14:38:53 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/24 09:06:51 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 
 size_t		ft_strlcat(char *dest,const char *src, size_t size);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
+size_t		ft_strlen(const char *str);
 void		*ft_memset(void *str, int value, size_t count);
 void		ft_bzero(void *str, size_t count);
 void		*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
@@ -34,7 +35,7 @@ char		*ft_strrchr(char const *str, int c);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
-//char 		*ft_strtrim(char const *s1, char const *set);
+char 		*ft_strtrim(char const *s1, char const *set);
 char		*ft_itoa(int n);
 int			ft_isalpha(int c);
 int			ft_isdigit(int nb);
@@ -44,7 +45,6 @@ int			ft_atoi(const char *str );
 int			ft_isalnum(int character);
 int			ft_isascii(int charactere);
 int			ft_isprint(int character);
-int			ft_strlen(const char *str);
 int			ft_strncmp(char *s1, char *s2, size_t n);
 int			ft_memcmp(const void *pointer1, const void *pointer2, size_t size );
 //ft_strnstr

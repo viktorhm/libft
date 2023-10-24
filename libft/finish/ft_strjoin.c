@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 15:49:24 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/23 12:20:25 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/24 08:32:40 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 	if(!str_finale)
 		return(NULL);
 	ft_bzero(str_finale,nb);
+	
 	ft_strlcat(str_finale , s1 , nb + 1);
 	ft_strlcat(str_finale , s2 , nb + 1);
 	return(str_finale);

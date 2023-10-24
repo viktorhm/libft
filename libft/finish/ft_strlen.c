@@ -6,12 +6,12 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 16:59:45 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/22 14:23:59 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/24 08:29:21 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

@@ -6,10 +6,10 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 08:27:41 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/19 14:28:20 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/24 08:30:09 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+/*#include "libft.h"
 
 int	ft_toupper(int chara)
 	{
@@ -17,7 +17,7 @@ int	ft_toupper(int chara)
 		chara = chara - 32 ;
 	return (chara);
 }
-/*
+
 #include<stdio.h>
 #include <ctype.h>
 int main (void)
