@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 12:41:09 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/24 18:04:45 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/25 00:04:30 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include"libft.h"
@@ -14,42 +14,65 @@
 
 
 
-static int nb_mots(char *s , char c) 
+static int	nb_mots(const char *str, char c)
+{
+	int i;
+	int trigger;
+
+	i = 0;
+	trigger = 0;
+	while (*str)
 	{
-	int i = 0;
-	int nb_mots =0;
-	while(s[i]!='\0')
-	{
-		if(s[i]==c)
-			nb_mots ++;
-
+		if (*str != c && trigger == 0)
+		{
+			trigger = 1;
+			i++;
+		}
+		else if (*str == c)
+			trigger = 0;
+		str++;
 	}
-	return(nb_mots+1);
-	}
+	return (i);
+}
 
-static *char Created_word(int start , int end ,char *s , char c )
-	{
-	int cont = 0 ;
-	char word
+static char *created_word(const char *str ,int start , int end )
+{
+	int i ;
+	char *word;
 
-	word = malloc((end - start(+1)) *sizeof(char) )
-		while(start < finish)
-			word[i++]=str[start++]
-		word[i] = '\0'
-		return word
+	i=0;
+	word = malloc((end - start +1) *sizeof(char));
+		while(start < end)
+			word[i++]=str[start++];
+	word[i] = '\0';
+	return (word);
 
-	}
+}
 
 char	**ft_split(char const *s, char c)
 {
-int i = 0;
-while(i < strlen(s))
-{
+size_t i;
+size_t j; 
+int		index;
+char	**lst;
+
+if(!s || !(lst = malloc((nb_mots(s,c) + 1) *sizeof(char *))))
+	return(0);
+i = 0;
+j = 0;
+index = -1;
+while(i <= strlen(s))
+	{
 	if(s[i] != c && index < 0)
-		index = i
-	
-
-
-}
+		index = i; 
+	else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		{
+			lst[j++] = created_word(s, index, i);
+			index = -1;
+		}
+		i++;
+	}
+	lst[j] = 0;
+	return(lst); 
 
 }
