@@ -6,11 +6,11 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 12:25:00 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/24 09:06:21 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:40:30 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 static int	is_in_set(char const c, char const *set)
 {
@@ -58,5 +58,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trim, (s1 + start), (end - start + 2));
 	return (trim);
 }
-
-

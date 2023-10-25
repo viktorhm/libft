@@ -6,12 +6,12 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 08:13:54 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/23 12:09:34 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:19:12 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest,const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int	i;
 	unsigned int	j;

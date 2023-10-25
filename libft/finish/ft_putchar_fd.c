@@ -6,14 +6,12 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 04:11:59 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/25 04:19:49 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:58:45 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+#include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-write(fd,&c ,1);
-
-
+	write(fd, &c, 1);
 }

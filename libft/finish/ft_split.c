@@ -6,18 +6,15 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 12:41:09 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/25 00:04:30 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:44:42 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
-
-
-
+#include "libft.h"
 
 static int	nb_mots(const char *str, char c)
 {
-	int i;
-	int trigger;
+	int	i;
+	int	trigger;
 
 	i = 0;
 	trigger = 0;
@@ -35,37 +32,37 @@ static int	nb_mots(const char *str, char c)
 	return (i);
 }
 
-static char *created_word(const char *str ,int start , int end )
+static char	*created_word(const char *str, int start, int end)
 {
-	int i ;
-	char *word;
+	char	*word;
+	int		i;
 
-	i=0;
-	word = malloc((end - start +1) *sizeof(char));
-		while(start < end)
-			word[i++]=str[start++];
+	i = 0;
+	word = malloc ((end - start + 1) * sizeof(char));
+	while (start < end)
+		word[i++] = str[start++];
 	word[i] = '\0';
 	return (word);
-
 }
 
 char	**ft_split(char const *s, char c)
 {
-size_t i;
-size_t j; 
-int		index;
-char	**lst;
+	size_t	i;
+	size_t	j;
+	int		index;
+	char	**lst;
 
-if(!s || !(lst = malloc((nb_mots(s,c) + 1) *sizeof(char *))))
-	return(0);
-i = 0;
-j = 0;
-index = -1;
-while(i <= strlen(s))
+	lst = malloc((nb_mots(s, c) + 1) * sizeof(char *));
+	if (!s || !lst)
+		return (0);
+	i = 0;
+	j = 0;
+	index = -1;
+	while (i <= strlen(s))
 	{
-	if(s[i] != c && index < 0)
-		index = i; 
-	else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
 			lst[j++] = created_word(s, index, i);
 			index = -1;
@@ -73,6 +70,5 @@ while(i <= strlen(s))
 		i++;
 	}
 	lst[j] = 0;
-	return(lst); 
-
+	return (lst);
 }

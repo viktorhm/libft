@@ -6,10 +6,10 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:09:35 by vharatyk          #+#    #+#             */
-/*   Updated: 2023/10/25 02:00:35 by vharatyk         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:20:52 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -29,5 +29,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	result[cur] = 0;
 	return (result);
-
 }

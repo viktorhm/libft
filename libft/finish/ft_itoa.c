@@ -1,7 +1,20 @@
-#include"libft.h"
-static int		count(int n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/25 15:52:26 by vharatyk          #+#    #+#             */
+/*   Updated: 2023/10/25 16:06:06 by vharatyk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+static int	count(int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n == 0)
@@ -14,11 +27,11 @@ static int		count(int n)
 	return (count);
 }
 
-static void		recursion(int *i, int n, char *str)
+static void	recursion(int *i, int n, char *str)
 {
 	if (n == -2147483648)
 	{
-		str[(*i)++] = '-'; // modifier str direct
+		str[(*i)++] = '-';
 		str[(*i)++] = '2';
 		n = 147483648;
 	}
@@ -39,7 +52,7 @@ static void		recursion(int *i, int n, char *str)
 	}
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		i;
